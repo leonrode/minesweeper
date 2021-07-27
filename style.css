@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Encode Sans SC', sans-serif;
+  color: black;
+  user-select: none;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, hsla(319, 100%, 45%, 1) 0%, hsla(319, 100%, 32%, 1) 100%)
+}
+
+#initial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  font-size: 4rem;
+}
+
+#choose-shape {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+#square, #circle, #triangle {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+#directions {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#square:hover, #circle:hover, #triangle:hover {
+
+  box-shadow: inset 5em 0 black, inset -5em 0 black;
+  color: #f6f6f6;
+}
+
+
+#square-container {
+  width: 750px;
+  height: 750px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 1px solid rgb(191, 0, 130);
+  background-color: rgb(174, 0, 119);
+}
+
+.cell-cover:hover {
+  background-color: rgb(131, 0, 90);
+}
+.bomb-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.cell-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: rgb(157, 0, 107);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+i {
+  color: rgb(85, 0, 57);
+}
+
+#controls-stats {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#flag-shift, #click-eye {
+  display: flex;
+  align-items: center;
+}
+
+#click-eye {
+  margin-left: 20px;
+}
+
+#flag-shift > span, #click-eye > span,#stats > span {
+  margin-left: 10px;
+}
+#controls {
+  display: flex;
+  width: 30%;
+  justify-content: flex-start;
+}
+
+#stats {
+  display: flex;
+}
+
+#won, #lost {
+  font-size: 2rem;
+}
