@@ -18,50 +18,6 @@ body {
   background: linear-gradient(45deg, hsla(319, 100%, 45%, 1) 0%, hsla(319, 100%, 32%, 1) 100%)
 }
 
-#initial-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-  width: 100%;
-}
-
-#title {
-  font-size: 4rem;
-}
-
-#choose-shape {
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
-}
-
-#square, #circle, #triangle {
-  width: 150px;
-  height: 50px;
-  background-color: black;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid black;
-  transition: all 0.1s ease-in-out;
-  cursor: pointer;
-  user-select: none;
-}
-#directions {
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-#square:hover, #circle:hover, #triangle:hover {
-
-  box-shadow: inset 5em 0 black, inset -5em 0 black;
-  color: #f6f6f6;
-}
-
 
 #square-container {
   width: 750px;
@@ -142,4 +98,28 @@ i {
 
 #won, #lost {
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  #square-container {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .cell {
+    width: calc(100vw / 15);
+    height: calc(100vw / 15);
+  }
+
+  .bomb-count {
+    font-size: 1rem;
+  }
+
+  #controls-stats {
+    display: none;
+  }
+
+  #won, #lost {
+    font-size: 1.5rem;
+  }
 }
